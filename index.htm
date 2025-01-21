@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>бургер?</title>
+    <title>Сайт0.о</title>
     <style>
         body {
             margin: 0;
@@ -11,8 +11,8 @@
         }
 
         #header {
-            background-color: #9ee788;
-            padding: 30px;
+            background-color: #bbaaaa;
+            padding: 10px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -22,26 +22,121 @@
         #logo {
             width: 80px;
             height: auto;
-            position: absolute; 
-            top: 10px;
-            left: 00px;
         }
 
-        #slogan {
-            margin-right: 50px;
+        .menu-btn {
+            display: inline-block;
+            cursor: pointer;
+            margin-right: 20px;
         }
 
-        #content {
-            padding: 50px;
+        .menu-btn span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin-bottom: 5px;
+            background-color: #333;
+            transition: 0.3s;
+        }
+
+        #menu {
+            display: none;
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            width: 100%;
+            background-color: #888888;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+
+        #menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu li {
+            padding: 10px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu-btn.active + #menu {
+            display: block;
+        }
+
+       
+        .scroll-container {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .scroll-item {
+            display: inline-block;
+            width: 200px; 
+            height: 150px; 
+            margin-right: 10px;
+        }
+
+        .scroll-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
 
     <header id="header">
-        <img id="logo" src="burger-10956.png" alt="Логотип">
-        <span id="slogan">бургеры? наверно:/</span>
+        <img id="logo" src="1689694836_new_preview_5cd980142c593e495e3e0153.jpg">
+
+        <div class="menu-btn" onclick="toggleMenu(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <div class="scroll-container">
+        <div class="scroll-item">
+            <img src="89655614-fa46-45aa-be6c-e351f9c8f1de.jpg">
+        </div>
+        <div class="scroll-item">
+            <img src="photo_5224262957905602214_x.jpg">
+        </div>
+        <div class="scroll-item">
+            <img src="photo_5224262957905602213_x.jpg">
+        </div>
+         <div class="scroll-item">
+            <img scr="photo_5224262957905602212_x.jpg">
+         </div>
+         <div class="scroll-item">
+            <img src="photo_5224262957905602216_x.jpg">
+         </div>
+         <div class="scroll-item">
+            <img src="photo_5224262957905602211_y.jpg">
+         </div>
+    </div>
+
+    <script>
+        function toggleMenu(btn) {
+            btn.classList.toggle("active");
+        }
+    </script>
 
 </body>
 </html>
